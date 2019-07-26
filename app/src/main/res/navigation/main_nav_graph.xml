@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav_graph"
+    app:startDestination="@id/addWordFragment">
+
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.example.englishtranslationword.screen.add_word.AddWordFragment"
+        android:label="AddWordFragment" >
+        <action
+            android:id="@+id/action_addWordFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="com.example.englishtranslationword.screen.list_word.WordListFragment"
+        android:label="WordListFragment" >
+        <action
+            android:id="@+id/action_wordListFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+    </fragment>
+</navigation>
